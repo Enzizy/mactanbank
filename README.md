@@ -1,6 +1,6 @@
 # Mactan Bank — Elementor reference site
 
-A plain HTML/CSS design reference for rebuilding mactanbank.com in **WordPress + Elementor**. Nothing here needs to be uploaded to WordPress except the two logo files. Use it as the visual spec and copy each section into Elementor.
+A plain HTML/CSS design reference for rebuilding mactanbank.com in **WordPress + Elementor**. Nothing here needs to be uploaded to WordPress except the two logo files and the four footer affiliate logos. Use it as the visual spec and copy each section into Elementor.
 
 ## Open it
 
@@ -29,6 +29,8 @@ Double-click `index.html`, or serve the folder (`python -m http.server 8081`) an
 5. **Single Post** and **Archive** templates for news (Loop Grid or Posts widget).
 6. Forms: use the Elementor **Form** widget (multi-step with Step fields for the loan application) or keep the existing Contact Form 7 shortcodes.
 7. Rate and comparison tables: use an **HTML** widget with the table markup, or TablePress. Add the `.table` CSS from `assets/css/style.css` under Site Settings → Custom CSS.
+8. **Privacy & terms popup**: Templates → Popups (Elementor Pro). Trigger *On page load*, condition *Entire site*. Link the "I agree" button to *Actions → Popup → Close Popup* with **Don't Show Again** ticked. The close button only hides it for that visit. Without Pro, a free popup plugin such as Popup Maker can do the same. Add `?popup` to any preview URL to see it again after you've agreed.
+9. **Branch locator** (list + map): Elementor's Google Maps widget shows only one location, so the page uses an **HTML** widget. Paste in the locator markup from `branches.html` (the `.locator` block), the Leaflet CSS/JS links from that page's `<head>` and footer, and `assets/js/branch-map.js`. Add the *Branch locator* and *Map pins* CSS to Custom CSS. The map uses OpenStreetMap tiles, so it's free and needs no API key. Each pin comes from the `data-lat`/`data-lng` on its branch card. Clicking a card zooms the map to it, clicking a pin highlights its card, and the search and region chips filter the list and pins together.
 
 ## Pages (40)
 
@@ -45,8 +47,10 @@ Double-click `index.html`, or serve the folder (`python -m http.server 8081`) an
 - `assets/img/mactanbank-logo.png`: the original logo, trimmed, with a transparent background (use on light backgrounds).
 - `assets/img/mactanbank-logo-white.png`: reversed logo, white + lime (use on Forest/dark backgrounds).
 - `assets/img/favicon.png`: the triangle mark (use as Site Icon).
+- `assets/img/affiliates/*.png`: the four "Related companies" logos for the footer (Mr. Yu Finance, Citizens Lending, Asaynica Realty, Ernesto Asay Yu Foundation), cut from the live site's single `affiliates.png`. Upload these to the Media Library too.
 - `assets/css/style.css`: the whole design system. Comments map each block to Elementor settings.
-- `assets/js/main.js`: only drives the preview. You don't need it in Elementor, because widgets already include these behaviors (tabs, accordion, sticky header, mobile menu, multi-step form, entrance animations).
+- `assets/js/main.js`: only drives the preview. You don't need it in Elementor, because widgets already include these behaviors (tabs, accordion, sticky header, mobile menu, multi-step form, privacy popup, entrance animations).
+- `assets/js/branch-map.js`: the branch locator map. Unlike `main.js`, this one **is** needed in WordPress (see build step 9).
 
 ## Content to confirm with Mactan Bank before launch
 
@@ -62,6 +66,8 @@ All copy, rates and contact details were copied from the live site (September 20
 8. **Download links** on Forms & reports are placeholders (`#`). Link them to the real PDFs in the Media Library.
 9. **Time deposit table**: row 2 starts at ₱50,000.00, which overlaps row 1's upper limit. It is copied as published.
 10. Re-confirm all **rates, loan limits, phone numbers, emails and hours** with Compliance and Operations.
+11. **Branch map pins** were geocoded from OpenStreetMap to street or barangay level, not to the exact building. Have each branch confirm its pin (drop a pin in Google Maps and copy the coordinates), then update `lat`/`lng` in `BRANCHES`.
+12. **Privacy popup wording** is new copy based on the live Privacy Policy and Terms of Use pages. Compliance should approve it.
 
 ## Regenerate
 

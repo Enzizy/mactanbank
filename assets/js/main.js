@@ -55,7 +55,7 @@
   var grid = document.querySelector('[data-branch-grid]');
   if (grid) {
     var input = document.querySelector('[data-branch-search]');
-    var chips = document.querySelectorAll('[data-region]');
+    var chips = document.querySelectorAll('.chips [data-region]');
     var empty = document.querySelector('[data-branch-empty]');
     var region = 'all';
     var apply = function () {
@@ -67,6 +67,7 @@
         if (ok) shown++;
       });
       empty.hidden = shown > 0;
+      grid.dispatchEvent(new CustomEvent('branches:filter'));
     };
     input.addEventListener('input', apply);
     chips.forEach(function (chip) {
@@ -77,6 +78,22 @@
         region = chip.dataset.region;
         apply();
       });
+    });
+  }
+
+  // Privacy & terms popup (Popup template → On page load; "I agree" = Don't show again).
+  // "I agree" hides it for good; the close button or Esc hides it for this visit only.
+  // Add ?popup to any URL to see it again.
+  var popup = document.getElementById('privacy-popup');
+  if (popup && popup.showModal) {
+    var seen = false;
+    try { seen = localStorage.getItem('mb-privacy') === '1' || sessionStorage.getItem('mb-privacy') === '1'; } catch (e) {}
+    if (!seen || /[?&]popup\b/.test(location.search)) popup.showModal();
+    popup.addEventListener('close', function () {
+      try {
+        if (popup.returnValue === 'agree') localStorage.setItem('mb-privacy', '1');
+        else sessionStorage.setItem('mb-privacy', '1');
+      } catch (e) {}
     });
   }
 

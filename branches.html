@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -95,150 +96,114 @@
         <button class="chip chip--light" type="button" data-region="cebu" aria-pressed="false">Cebu</button><button class="chip chip--light" type="button" data-region="leyte" aria-pressed="false">Leyte</button><button class="chip chip--light" type="button" data-region="negros" aria-pressed="false">Negros Oriental</button>
       </div>
     </div>
-    <div class="grid grid--3" data-branch-grid data-el="Container · Grid 3 cols (Tablet 2, Mobile 1) · Gap 24 › Branch card ×10">
-      
-      <article class="branch-card" id="lapu-lapu" data-region="cebu" data-el="Container card › Heading H3 · Text (region badge) · Icon List ×3 · Button (outline, small)">
-        <div class="branch-card__head">
-          <div><h3>Main Branch</h3><span class="branch-card__region branch-card__main">Head office · Cebu</span></div>
-          <span class="icon-badge" style="width:44px;height:44px;font-size:17px;border-radius:12px"><i class="fas fa-university"></i></span>
-        </div>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i><span>MYFC Bldg., M. Patalinghug Ave., Pajo, Lapu-Lapu City 6015</span></li>
-          <li><i class="fas fa-phone-alt"></i><a href="tel:0324952331">(032) 495-2331 | 340-3978</a></li>
-          <li><i class="fas fa-envelope"></i><a href="mailto:main@mactanbank.com">main@mactanbank.com</a></li>
-        </ul>
-        <a class="btn btn--outline btn--sm" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20MYFC%20Bldg.%2C%20M.%20Patalinghug%20Ave.%2C%20Pajo%2C%20Lapu-Lapu%20City%206015" target="_blank" rel="noopener">Get directions <i class="fas fa-directions"></i></a>
-      </article>
-      <article class="branch-card" id="bogo" data-region="cebu" data-el="Container card › Heading H3 · Text (region badge) · Icon List ×3 · Button (outline, small)">
-        <div class="branch-card__head">
-          <div><h3>Bogo Branch</h3><span class="branch-card__region">Cebu</span></div>
-          <span class="icon-badge" style="width:44px;height:44px;font-size:17px;border-radius:12px"><i class="fas fa-university"></i></span>
-        </div>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i><span>ARDC Bldg., Cogon, Bogo City, Cebu</span></li>
-          <li><i class="fas fa-phone-alt"></i><a href="tel:0324076276">(032) 407-6276</a></li>
-          <li><i class="fas fa-envelope"></i><a href="mailto:bogo@mactanbank.com">bogo@mactanbank.com</a></li>
-        </ul>
-        <a class="btn btn--outline btn--sm" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20ARDC%20Bldg.%2C%20Cogon%2C%20Bogo%20City%2C%20Cebu" target="_blank" rel="noopener">Get directions <i class="fas fa-directions"></i></a>
-      </article>
-      <article class="branch-card" id="carcar" data-region="cebu" data-el="Container card › Heading H3 · Text (region badge) · Icon List ×3 · Button (outline, small)">
-        <div class="branch-card__head">
-          <div><h3>Carcar Branch</h3><span class="branch-card__region">Cebu</span></div>
-          <span class="icon-badge" style="width:44px;height:44px;font-size:17px;border-radius:12px"><i class="fas fa-university"></i></span>
-        </div>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i><span>ARDC Bldg., Valladolid, Carcar City, Cebu</span></li>
-          <li><i class="fas fa-phone-alt"></i><a href="tel:0324251142">(032) 425-1142</a></li>
-          <li><i class="fas fa-envelope"></i><a href="mailto:carcar@mactanbank.com">carcar@mactanbank.com</a></li>
-        </ul>
-        <a class="btn btn--outline btn--sm" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20ARDC%20Bldg.%2C%20Valladolid%2C%20Carcar%20City%2C%20Cebu" target="_blank" rel="noopener">Get directions <i class="fas fa-directions"></i></a>
-      </article>
-      <article class="branch-card" id="cebu" data-region="cebu" data-el="Container card › Heading H3 · Text (region badge) · Icon List ×3 · Button (outline, small)">
-        <div class="branch-card__head">
-          <div><h3>Cebu City Branch</h3><span class="branch-card__region">Cebu</span></div>
-          <span class="icon-badge" style="width:44px;height:44px;font-size:17px;border-radius:12px"><i class="fas fa-university"></i></span>
-        </div>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i><span>ARDC Bldg., C. Padilla St., Pahina, San Nicolas, Cebu City</span></li>
-          <li><i class="fas fa-phone-alt"></i><a href="tel:0322549825">(032) 254-9825</a></li>
-          <li><i class="fas fa-envelope"></i><a href="mailto:cebu@mactanbank.com">cebu@mactanbank.com</a></li>
-        </ul>
-        <a class="btn btn--outline btn--sm" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20ARDC%20Bldg.%2C%20C.%20Padilla%20St.%2C%20Pahina%2C%20San%20Nicolas%2C%20Cebu%20City" target="_blank" rel="noopener">Get directions <i class="fas fa-directions"></i></a>
-      </article>
-      <article class="branch-card" id="liloan" data-region="cebu" data-el="Container card › Heading H3 · Text (region badge) · Icon List ×3 · Button (outline, small)">
-        <div class="branch-card__head">
-          <div><h3>Liloan Branch</h3><span class="branch-card__region">Cebu</span></div>
-          <span class="icon-badge" style="width:44px;height:44px;font-size:17px;border-radius:12px"><i class="fas fa-university"></i></span>
-        </div>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i><span>Purok Tambis, Yati, Liloan, Cebu</span></li>
-          <li><i class="fas fa-phone-alt"></i><a href="tel:0324273662">(032) 427-3662</a></li>
-          <li><i class="fas fa-envelope"></i><a href="mailto:liloan@mactanbank.com">liloan@mactanbank.com</a></li>
-        </ul>
-        <a class="btn btn--outline btn--sm" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20Purok%20Tambis%2C%20Yati%2C%20Liloan%2C%20Cebu" target="_blank" rel="noopener">Get directions <i class="fas fa-directions"></i></a>
-      </article>
-      <article class="branch-card" id="toledo" data-region="cebu" data-el="Container card › Heading H3 · Text (region badge) · Icon List ×3 · Button (outline, small)">
-        <div class="branch-card__head">
-          <div><h3>Toledo Branch</h3><span class="branch-card__region">Cebu</span></div>
-          <span class="icon-badge" style="width:44px;height:44px;font-size:17px;border-radius:12px"><i class="fas fa-university"></i></span>
-        </div>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i><span>Sangi, Toledo City, Cebu</span></li>
-          <li><i class="fas fa-phone-alt"></i><a href="tel:0324678494">(032) 467-8494</a></li>
-          <li><i class="fas fa-envelope"></i><a href="mailto:toledo@mactanbank.com">toledo@mactanbank.com</a></li>
-        </ul>
-        <a class="btn btn--outline btn--sm" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20Sangi%2C%20Toledo%20City%2C%20Cebu" target="_blank" rel="noopener">Get directions <i class="fas fa-directions"></i></a>
-      </article>
-      <article class="branch-card" id="moalboal" data-region="cebu" data-el="Container card › Heading H3 · Text (region badge) · Icon List ×3 · Button (outline, small)">
-        <div class="branch-card__head">
-          <div><h3>Moalboal Branch</h3><span class="branch-card__region">Cebu</span></div>
-          <span class="icon-badge" style="width:44px;height:44px;font-size:17px;border-radius:12px"><i class="fas fa-university"></i></span>
-        </div>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i><span>Poblacion, Moalboal, Cebu</span></li>
-          <li><i class="fas fa-phone-alt"></i><a href="tel:0324748544">(032) 474-8544</a></li>
-          <li><i class="fas fa-envelope"></i><a href="mailto:moalboal@mactanbank.com">moalboal@mactanbank.com</a></li>
-        </ul>
-        <a class="btn btn--outline btn--sm" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20Poblacion%2C%20Moalboal%2C%20Cebu" target="_blank" rel="noopener">Get directions <i class="fas fa-directions"></i></a>
-      </article>
-      <article class="branch-card" id="tacloban" data-region="leyte" data-el="Container card › Heading H3 · Text (region badge) · Icon List ×3 · Button (outline, small)">
-        <div class="branch-card__head">
-          <div><h3>Tacloban Branch</h3><span class="branch-card__region">Leyte</span></div>
-          <span class="icon-badge" style="width:44px;height:44px;font-size:17px;border-radius:12px"><i class="fas fa-university"></i></span>
-        </div>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i><span>M Block Building, Marasbaras, Tacloban City</span></li>
-          <li><i class="fas fa-phone-alt"></i><a href="tel:0535230010">(053) 523-0010</a></li>
-          <li><i class="fas fa-envelope"></i><a href="mailto:tacloban@mactanbank.com">tacloban@mactanbank.com</a></li>
-        </ul>
-        <a class="btn btn--outline btn--sm" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20M%20Block%20Building%2C%20Marasbaras%2C%20Tacloban%20City" target="_blank" rel="noopener">Get directions <i class="fas fa-directions"></i></a>
-      </article>
-      <article class="branch-card" id="ormoc" data-region="leyte" data-el="Container card › Heading H3 · Text (region badge) · Icon List ×3 · Button (outline, small)">
-        <div class="branch-card__head">
-          <div><h3>Ormoc Branch</h3><span class="branch-card__region">Leyte</span></div>
-          <span class="icon-badge" style="width:44px;height:44px;font-size:17px;border-radius:12px"><i class="fas fa-university"></i></span>
-        </div>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i><span>Arradaza Bldg., Bonifacio St., Ormoc City</span></li>
-          <li><i class="fas fa-phone-alt"></i><a href="tel:0535617253">(053) 561-7253</a></li>
-          <li><i class="fas fa-envelope"></i><a href="mailto:ormoc@mactanbank.com">ormoc@mactanbank.com</a></li>
-        </ul>
-        <a class="btn btn--outline btn--sm" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20Arradaza%20Bldg.%2C%20Bonifacio%20St.%2C%20Ormoc%20City" target="_blank" rel="noopener">Get directions <i class="fas fa-directions"></i></a>
-      </article>
-      <article class="branch-card" id="dumaguete" data-region="negros" data-el="Container card › Heading H3 · Text (region badge) · Icon List ×3 · Button (outline, small)">
-        <div class="branch-card__head">
-          <div><h3>Dumaguete Branch</h3><span class="branch-card__region">Negros Oriental</span></div>
-          <span class="icon-badge" style="width:44px;height:44px;font-size:17px;border-radius:12px"><i class="fas fa-university"></i></span>
-        </div>
-        <ul>
-          <li><i class="fas fa-map-marker-alt"></i><span>ARDC Bldg. Dr. V. Locsin St., Taclobo, Dumaguete City</span></li>
-          <li><i class="fas fa-phone-alt"></i><a href="tel:0354020708">(035) 402-0708</a></li>
-          <li><i class="fas fa-envelope"></i><a href="mailto:dumaguete@mactanbank.com">dumaguete@mactanbank.com</a></li>
-        </ul>
-        <a class="btn btn--outline btn--sm" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20ARDC%20Bldg.%20Dr.%20V.%20Locsin%20St.%2C%20Taclobo%2C%20Dumaguete%20City" target="_blank" rel="noopener">Get directions <i class="fas fa-directions"></i></a>
-      </article>
-    </div>
-    <p class="empty-state" data-branch-empty hidden>No branch matches that search.</p>
-  </div>
-</section>
-
-<section class="section section--surface" data-el="Container · Full width · BG Surface · Pad 104 · Row 40/60">
-  <div class="container">
-    <div class="row" style="gap:48px">
-      <div class="col col--5 reveal">
-        <p class="eyebrow">Head office</p>
-        <h2>Main Branch, Lapu-Lapu City</h2>
-        <ul class="footer__contact mt-24" style="color:var(--c-text)">
-          <li><i class="fas fa-map-marker-alt" style="color:var(--c-leaf)"></i><span>MYFC Bldg., M. Patalinghug Ave., Pajo, Lapu-Lapu City 6015</span></li>
-          <li><i class="fas fa-phone-alt" style="color:var(--c-leaf)"></i><span>(032) 495-2331 | 340-3978</span></li>
-          <li><i class="fas fa-clock" style="color:var(--c-leaf)"></i><span>Tuesday–Saturday, 9:00 AM–5:00 PM</span></li>
-        </ul>
-        <a class="btn btn--dark mt-40" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20MYFC%20Bldg.%2C%20M.%20Patalinghug%20Ave.%2C%20Pajo%2C%20Lapu-Lapu%20City%206015" target="_blank" rel="noopener">Open in Google Maps <i class="fas fa-arrow-right"></i></a>
+    <div class="locator" data-el="HTML widget (branch list + Leaflet map, see README) · Row 42/58 · Gap 24 · Tablet/Mobile: map on top">
+      <div class="locator__list" data-branch-grid data-el="Scrolling list · Max height 640 › Branch item ×10 (click to show on map)">
+        
+        <article class="branch-card branch-card--main" id="lapu-lapu" data-region="cebu" data-lat="10.3159" data-lng="123.9577">
+          <span class="branch-card__icon"><i class="fas fa-university"></i></span>
+          <div class="branch-card__body">
+            <h3><button type="button" class="branch-card__name">Main Branch</button></h3>
+            <span class="branch-card__region">Head office · Cebu</span>
+            <p class="branch-card__address">MYFC Bldg., M. Patalinghug Ave., Pajo, Lapu-Lapu City 6015</p>
+            <p class="branch-card__contact"><a href="tel:0324952331"><i class="fas fa-phone-alt"></i>(032) 495-2331 | 340-3978</a><a href="mailto:main@mactanbank.com"><i class="fas fa-envelope"></i>main@mactanbank.com</a></p>
+          </div>
+          <a class="branch-card__directions" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20MYFC%20Bldg.%2C%20M.%20Patalinghug%20Ave.%2C%20Pajo%2C%20Lapu-Lapu%20City%206015" target="_blank" rel="noopener">Directions <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="branch-card" id="bogo" data-region="cebu" data-lat="11.0495" data-lng="124.0051">
+          <span class="branch-card__icon"><i class="fas fa-university"></i></span>
+          <div class="branch-card__body">
+            <h3><button type="button" class="branch-card__name">Bogo Branch</button></h3>
+            <span class="branch-card__region">Cebu</span>
+            <p class="branch-card__address">ARDC Bldg., Cogon, Bogo City, Cebu</p>
+            <p class="branch-card__contact"><a href="tel:0324076276"><i class="fas fa-phone-alt"></i>(032) 407-6276</a><a href="mailto:bogo@mactanbank.com"><i class="fas fa-envelope"></i>bogo@mactanbank.com</a></p>
+          </div>
+          <a class="branch-card__directions" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20ARDC%20Bldg.%2C%20Cogon%2C%20Bogo%20City%2C%20Cebu" target="_blank" rel="noopener">Directions <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="branch-card" id="carcar" data-region="cebu" data-lat="10.1004" data-lng="123.6627">
+          <span class="branch-card__icon"><i class="fas fa-university"></i></span>
+          <div class="branch-card__body">
+            <h3><button type="button" class="branch-card__name">Carcar Branch</button></h3>
+            <span class="branch-card__region">Cebu</span>
+            <p class="branch-card__address">ARDC Bldg., Valladolid, Carcar City, Cebu</p>
+            <p class="branch-card__contact"><a href="tel:0324251142"><i class="fas fa-phone-alt"></i>(032) 425-1142</a><a href="mailto:carcar@mactanbank.com"><i class="fas fa-envelope"></i>carcar@mactanbank.com</a></p>
+          </div>
+          <a class="branch-card__directions" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20ARDC%20Bldg.%2C%20Valladolid%2C%20Carcar%20City%2C%20Cebu" target="_blank" rel="noopener">Directions <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="branch-card" id="cebu" data-region="cebu" data-lat="10.2935" data-lng="123.889">
+          <span class="branch-card__icon"><i class="fas fa-university"></i></span>
+          <div class="branch-card__body">
+            <h3><button type="button" class="branch-card__name">Cebu City Branch</button></h3>
+            <span class="branch-card__region">Cebu</span>
+            <p class="branch-card__address">ARDC Bldg., C. Padilla St., Pahina, San Nicolas, Cebu City</p>
+            <p class="branch-card__contact"><a href="tel:0322549825"><i class="fas fa-phone-alt"></i>(032) 254-9825</a><a href="mailto:cebu@mactanbank.com"><i class="fas fa-envelope"></i>cebu@mactanbank.com</a></p>
+          </div>
+          <a class="branch-card__directions" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20ARDC%20Bldg.%2C%20C.%20Padilla%20St.%2C%20Pahina%2C%20San%20Nicolas%2C%20Cebu%20City" target="_blank" rel="noopener">Directions <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="branch-card" id="liloan" data-region="cebu" data-lat="10.3897" data-lng="123.9814">
+          <span class="branch-card__icon"><i class="fas fa-university"></i></span>
+          <div class="branch-card__body">
+            <h3><button type="button" class="branch-card__name">Liloan Branch</button></h3>
+            <span class="branch-card__region">Cebu</span>
+            <p class="branch-card__address">Purok Tambis, Yati, Liloan, Cebu</p>
+            <p class="branch-card__contact"><a href="tel:0324273662"><i class="fas fa-phone-alt"></i>(032) 427-3662</a><a href="mailto:liloan@mactanbank.com"><i class="fas fa-envelope"></i>liloan@mactanbank.com</a></p>
+          </div>
+          <a class="branch-card__directions" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20Purok%20Tambis%2C%20Yati%2C%20Liloan%2C%20Cebu" target="_blank" rel="noopener">Directions <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="branch-card" id="toledo" data-region="cebu" data-lat="10.3868" data-lng="123.6522">
+          <span class="branch-card__icon"><i class="fas fa-university"></i></span>
+          <div class="branch-card__body">
+            <h3><button type="button" class="branch-card__name">Toledo Branch</button></h3>
+            <span class="branch-card__region">Cebu</span>
+            <p class="branch-card__address">Sangi, Toledo City, Cebu</p>
+            <p class="branch-card__contact"><a href="tel:0324678494"><i class="fas fa-phone-alt"></i>(032) 467-8494</a><a href="mailto:toledo@mactanbank.com"><i class="fas fa-envelope"></i>toledo@mactanbank.com</a></p>
+          </div>
+          <a class="branch-card__directions" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20Sangi%2C%20Toledo%20City%2C%20Cebu" target="_blank" rel="noopener">Directions <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="branch-card" id="moalboal" data-region="cebu" data-lat="9.94" data-lng="123.397">
+          <span class="branch-card__icon"><i class="fas fa-university"></i></span>
+          <div class="branch-card__body">
+            <h3><button type="button" class="branch-card__name">Moalboal Branch</button></h3>
+            <span class="branch-card__region">Cebu</span>
+            <p class="branch-card__address">Poblacion, Moalboal, Cebu</p>
+            <p class="branch-card__contact"><a href="tel:0324748544"><i class="fas fa-phone-alt"></i>(032) 474-8544</a><a href="mailto:moalboal@mactanbank.com"><i class="fas fa-envelope"></i>moalboal@mactanbank.com</a></p>
+          </div>
+          <a class="branch-card__directions" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20Poblacion%2C%20Moalboal%2C%20Cebu" target="_blank" rel="noopener">Directions <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="branch-card" id="tacloban" data-region="leyte" data-lat="11.2019" data-lng="125.0068">
+          <span class="branch-card__icon"><i class="fas fa-university"></i></span>
+          <div class="branch-card__body">
+            <h3><button type="button" class="branch-card__name">Tacloban Branch</button></h3>
+            <span class="branch-card__region">Leyte</span>
+            <p class="branch-card__address">M Block Building, Marasbaras, Tacloban City</p>
+            <p class="branch-card__contact"><a href="tel:0535230010"><i class="fas fa-phone-alt"></i>(053) 523-0010</a><a href="mailto:tacloban@mactanbank.com"><i class="fas fa-envelope"></i>tacloban@mactanbank.com</a></p>
+          </div>
+          <a class="branch-card__directions" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20M%20Block%20Building%2C%20Marasbaras%2C%20Tacloban%20City" target="_blank" rel="noopener">Directions <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="branch-card" id="ormoc" data-region="leyte" data-lat="11.0064" data-lng="124.6083">
+          <span class="branch-card__icon"><i class="fas fa-university"></i></span>
+          <div class="branch-card__body">
+            <h3><button type="button" class="branch-card__name">Ormoc Branch</button></h3>
+            <span class="branch-card__region">Leyte</span>
+            <p class="branch-card__address">Arradaza Bldg., Bonifacio St., Ormoc City</p>
+            <p class="branch-card__contact"><a href="tel:0535617253"><i class="fas fa-phone-alt"></i>(053) 561-7253</a><a href="mailto:ormoc@mactanbank.com"><i class="fas fa-envelope"></i>ormoc@mactanbank.com</a></p>
+          </div>
+          <a class="branch-card__directions" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20Arradaza%20Bldg.%2C%20Bonifacio%20St.%2C%20Ormoc%20City" target="_blank" rel="noopener">Directions <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <article class="branch-card" id="dumaguete" data-region="negros" data-lat="9.3071" data-lng="123.3045">
+          <span class="branch-card__icon"><i class="fas fa-university"></i></span>
+          <div class="branch-card__body">
+            <h3><button type="button" class="branch-card__name">Dumaguete Branch</button></h3>
+            <span class="branch-card__region">Negros Oriental</span>
+            <p class="branch-card__address">ARDC Bldg. Dr. V. Locsin St., Taclobo, Dumaguete City</p>
+            <p class="branch-card__contact"><a href="tel:0354020708"><i class="fas fa-phone-alt"></i>(035) 402-0708</a><a href="mailto:dumaguete@mactanbank.com"><i class="fas fa-envelope"></i>dumaguete@mactanbank.com</a></p>
+          </div>
+          <a class="branch-card__directions" href="https://www.google.com/maps/search/?api=1&query=Mactan%20Bank%20ARDC%20Bldg.%20Dr.%20V.%20Locsin%20St.%2C%20Taclobo%2C%20Dumaguete%20City" target="_blank" rel="noopener">Directions <i class="fas fa-arrow-right"></i></a>
+        </article>
+        <p class="empty-state" data-branch-empty hidden>No branch matches that search.</p>
       </div>
-      <div class="col reveal" data-el="Google Maps widget · Height 380 · Radius 24">
-        <iframe class="map-embed" title="Map of Mactan Bank Main Branch" loading="lazy" src="https://maps.google.com/maps?q=M.%20Patalinghug%20Ave%2C%20Pajo%2C%20Lapu-Lapu%20City%2C%20Cebu&z=15&output=embed"></iframe>
-      </div>
+      <div class="locator__map"><div id="branch-map" data-branch-map role="region" aria-label="Map of Mactan Bank branches"></div></div>
     </div>
+    <p class="small mt-24" style="color:var(--c-muted)"><i class="fas fa-clock" style="color:var(--c-leaf);margin-right:8px"></i>All branches are open Tuesday–Saturday, 9:00 AM–5:00 PM.</p>
   </div>
 </section>
 
@@ -301,6 +266,10 @@
         </ul>
       </div>
     </div>
+    <div class="footer__affiliates" data-el="Container · Row · Border top · Pad 32/0 › Heading (H5) · Container (Grid 4, Tablet 4, Mobile 2) › Image ×4 on white tiles">
+      <h5>Related companies</h5>
+      <ul class="footer__affiliates-list"><li><img src="assets/img/affiliates/mr-yu-finance.png" alt="Mr. Yu Finance Corporation" width="126" height="103" loading="lazy"></li><li><img src="assets/img/affiliates/citizens-lending.png" alt="Citizens Lending Corporation" width="221" height="98" loading="lazy"></li><li><img src="assets/img/affiliates/asaynica-realty.png" alt="Asaynica Realty &amp; Development Corporation" width="289" height="66" loading="lazy"></li><li><img src="assets/img/affiliates/asay-yu-foundation.png" alt="Ernesto Asay Yu Foundation Inc." width="118" height="115" loading="lazy"></li></ul>
+    </div>
     <div class="footer__pdic"><i class="fas fa-shield-alt"></i><span>Deposits are insured by PDIC up to ₱1 Million per depositor.</span></div>
     <div class="footer__bottom">
       <span>© 2026 Mactan Rural Bank (Lapu-Lapu City), Inc. All rights reserved.</span>
@@ -312,6 +281,22 @@
     </div>
   </div>
 </footer>
+
+<dialog class="privacy-popup" id="privacy-popup" aria-labelledby="privacy-popup-title" data-el="Popup template (Pro) · Trigger: On page load · Conditions: Entire site · Width 520 · Radius 24 › Icon · Heading · Text Editor · Button ×2 (I agree = Close Popup + Don't show again)">
+  <form method="dialog">
+    <button class="privacy-popup__close" value="dismiss" aria-label="Close"><i class="fas fa-times"></i></button>
+    <span class="icon-badge icon-badge--dark"><i class="fas fa-user-shield"></i></span>
+    <p class="eyebrow">Before you continue</p>
+    <h2 id="privacy-popup-title">Privacy Policy &amp; Terms of Use</h2>
+    <p>Your privacy is important to us. We use cookies to understand how this website is used and to improve our service. By continuing to use this site, you agree to our <a href="https://mactanbank.com/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://mactanbank.com/terms-of-use/" target="_blank" rel="noopener">Terms of Use</a>.</p>
+    <div class="privacy-popup__actions">
+      <button class="btn btn--dark" value="agree" autofocus>I agree <i class="fas fa-check"></i></button>
+      <a class="btn btn--outline" href="https://mactanbank.com/privacy-policy/" target="_blank" rel="noopener">Read the policy</a>
+    </div>
+  </form>
+</dialog>
 <script src="assets/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="assets/js/branch-map.js"></script>
 </body>
 </html>
