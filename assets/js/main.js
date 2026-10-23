@@ -20,12 +20,20 @@
     if (header) document.documentElement.style.setProperty('--nav-top', header.getBoundingClientRect().bottom + 'px');
   }
   if (toggle && nav) {
-    toggle.addEventListener('click', function () {
-      setNavTop();
-      var open = nav.classList.toggle('is-open');
+    var setMenu = function (open) {
+      if (open) setNavTop();
+      nav.classList.toggle('is-open', open);
       toggle.setAttribute('aria-expanded', open);
       toggle.innerHTML = open ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
       document.body.style.overflow = open ? 'hidden' : '';
+    };
+    toggle.addEventListener('click', function () { setMenu(!nav.classList.contains('is-open')); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) { setMenu(false); toggle.focus(); }
+    });
+    // Close the drawer if the screen grows past the tablet breakpoint while it's open.
+    window.matchMedia('(min-width: 1025px)').addEventListener('change', function (mq) {
+      if (mq.matches) setMenu(false);
     });
     nav.querySelectorAll('.nav__item--has-children > .nav__link').forEach(function (link) {
       link.addEventListener('click', function (e) {
