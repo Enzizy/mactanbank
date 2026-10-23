@@ -33,10 +33,15 @@
         iconAnchor: [20, 48],
         popupAnchor: [0, -46],
       }),
-    }).bindPopup(
+    });
+    var messenger = card.querySelector('a.branch-card__messenger');
+    marker.bindPopup(
       '<h4>' + name + '</h4>' +
       '<p>' + card.querySelector('.branch-card__address').textContent + '</p>' +
-      '<a href="' + card.querySelector('.branch-card__directions').href + '" target="_blank" rel="noopener">Get directions →</a>'
+      '<div class="map-popup__links">' +
+      '<a href="' + card.querySelector('.branch-card__directions').href + '" target="_blank" rel="noopener">Get directions →</a>' +
+      (messenger ? '<a href="' + messenger.href + '" target="_blank" rel="noopener">Message on Messenger →</a>' : '') +
+      '</div>'
     );
     marker.on('click', function () { select(card, false); });
     marker.on('popupclose', function () { if (card.classList.contains('is-active')) setActive(null); });

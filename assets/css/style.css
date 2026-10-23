@@ -611,7 +611,7 @@ a.chip:hover i { color: var(--c-primary); }
 .locator__list { position: relative; display: grid; gap: 12px; max-height: 640px; overflow-y: auto; padding-right: 6px; overscroll-behavior: contain; }
 .locator__map { position: sticky; top: 110px; height: 640px; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--c-line); background: var(--c-surface); }
 #branch-map { width: 100%; height: 100%; }
-.branch-card { display: grid; grid-template-columns: 52px minmax(0, 1fr) auto; gap: 16px; align-items: start; padding: 18px; border: 1px solid var(--c-line); border-radius: var(--r-md); background: var(--c-white); cursor: pointer; transition: border-color .2s, background .2s, box-shadow .2s; }
+.branch-card { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 16px; align-items: start; padding: 18px; border: 1px solid var(--c-line); border-radius: var(--r-md); background: var(--c-white); cursor: pointer; transition: border-color .2s, background .2s, box-shadow .2s; }
 .branch-card:hover { border-color: var(--c-leaf); box-shadow: var(--shadow-sm); }
 .branch-card.is-active { border-color: var(--c-secondary); background: var(--c-mint); box-shadow: inset 4px 0 0 var(--c-secondary); }
 .branch-card[hidden] { display: none; }
@@ -628,7 +628,12 @@ a.chip:hover i { color: var(--c-primary); }
 .branch-card__contact a { color: var(--c-text); }
 .branch-card__contact a:hover { color: var(--c-accent); }
 .branch-card__contact i { color: var(--c-leaf); margin-right: 6px; font-size: 12px; }
-.branch-card__directions { align-self: center; white-space: nowrap; font-family: var(--f-head); font-size: 13px; font-weight: 700; color: var(--c-accent); }
+.branch-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin-top: 14px; }
+.branch-card__messenger { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: var(--r-pill); background: var(--c-primary); color: var(--c-white); font-family: var(--f-head); font-size: 13px; font-weight: 700; transition: background .2s, transform .2s; }
+.branch-card__messenger i { color: var(--c-secondary); font-size: 15px; }
+a.branch-card__messenger:hover { background: var(--c-accent); color: var(--c-white); transform: translateY(-1px); }
+.branch-card__messenger[aria-disabled] { opacity: .45; cursor: not-allowed; }
+.branch-card__directions { white-space: nowrap; font-family: var(--f-head); font-size: 13px; font-weight: 700; color: var(--c-accent); }
 .branch-card__directions i { margin-left: 4px; transition: transform .2s; }
 .branch-card__directions:hover i { transform: translateX(3px); }
 
@@ -647,6 +652,7 @@ a.chip:hover i { color: var(--c-primary); }
 .leaflet-popup-content h4 { margin: 0 0 4px; font-size: 16px; color: var(--c-primary); }
 .leaflet-popup-content p { margin: 0 0 10px; color: var(--c-muted); }
 .leaflet-popup-content a { font-family: var(--f-head); font-weight: 700; color: var(--c-accent); }
+.leaflet-popup-content .map-popup__links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
 .empty-state { padding: 48px; text-align: center; color: var(--c-muted); border: 1px dashed var(--c-line); border-radius: var(--r-lg); }
 
 .map-embed { width: 100%; height: 100%; min-height: 400px; border: 0; border-radius: var(--r-lg); display: block; }
@@ -933,7 +939,6 @@ body.show-guide [data-el] [data-el]::after { background: #0073AA; top: auto; bot
   .locator__map { height: 340px; }
   .branch-card { grid-template-columns: 44px minmax(0, 1fr); padding: 16px; gap: 14px; }
   .branch-card__icon { width: 44px; height: 44px; font-size: 17px; }
-  .branch-card__directions { grid-column: 2; align-self: start; }
   .privacy-popup form { padding: 40px 24px 28px; }
   .privacy-popup h2 { font-size: 24px; }
   .privacy-popup__actions .btn { flex: 1 1 100%; justify-content: center; }
