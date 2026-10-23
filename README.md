@@ -32,11 +32,11 @@ Double-click `index.html`, or serve the folder (`python -m http.server 8081`) an
 8. **Privacy & terms popup**: Templates → Popups (Elementor Pro). Trigger *On page load*, condition *Entire site*, Advanced Rules → **Show up to 1 time per Session**. Link the "I agree" button to *Actions → Popup → Close Popup* (leave *Don't Show Again* unticked). The popup then appears on every fresh visit (a new tab or window) and stays closed while the visitor browses in that tab. Without Pro, a free popup plugin such as Popup Maker can do the same with a session cookie. Add `?popup` to any preview URL to see it again in the same tab.
 9. **Branch locator** (list + map): Elementor's Google Maps widget shows only one location, so the page uses an **HTML** widget. Paste in the locator markup from `branches.html` (the `.locator` block), the Leaflet CSS/JS links from that page's `<head>` and footer, and `assets/js/branch-map.js`. Add the *Branch locator* and *Map pins* CSS to Custom CSS. The map uses OpenStreetMap tiles, so it's free and needs no API key. Each pin comes from the `data-lat`/`data-lng` on its branch card. Clicking a card zooms the map to it, clicking a pin highlights its card, and the search and region chips filter the list and pins together.
 
-## Pages (40)
+## Pages (41)
 
 | Group | Files |
 | --- | --- |
-| Core | `index.html`, `about.html`, `branches.html`, `services.html`, `contact.html`, `faq.html`, `resources.html`, `careers.html` |
+| Core | `index.html`, `about.html`, `corporate-profile.html`, `branches.html`, `services.html`, `contact.html`, `faq.html`, `resources.html`, `careers.html` |
 | Loans | `loans.html` + 7 product pages `loan-*.html` + `apply.html` (online application, multi-step) |
 | Deposits | `deposits.html` + 5 savings pages `savings-*.html` + `time-deposit.html` |
 | News | `news.html` + 14 article pages `news-*.html` |
@@ -68,6 +68,7 @@ All copy, rates and contact details were copied from the live site (September 20
 10. Re-confirm all **rates, loan limits, phone numbers, emails and hours** with Compliance and Operations.
 11. **Branch map pins** were geocoded from OpenStreetMap to street or barangay level, not to the exact building. Have each branch confirm its pin (drop a pin in Google Maps and copy the coordinates), then update `lat`/`lng` in `BRANCHES`.
 12. **Privacy popup wording** is new copy based on the live Privacy Policy and Terms of Use pages. Compliance should approve it.
+13. **Corporate profile**: the Board of Directors and Executive officers are placeholders (4 cards each, plus a yellow note at the top). Mactan Bank still needs to send each person's name, position, photo (ideally portrait 4:5) and a short bio. Fill them in under `EXECUTIVES` in the generator, add or remove cards to match, and the placeholder styling and note disappear on their own.
 
 ## Regenerate
 
